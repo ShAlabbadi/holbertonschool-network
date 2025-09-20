@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script sets up a listener on localhost port 98 using netcat
+
+# Check if nc is installed
+if ! command -v nc &> /dev/null
+then
+    echo "nc (netcat) is not installed. Please install it to run this script."
+    exit 1
+fi
+
+# Set up a listener on localhost port 98
+echo "Listening on localhost, port 98. You can connect using 'telnet localhost 98' from another terminal."
+nc -lk 127.0.0.1 98
