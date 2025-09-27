@@ -7,19 +7,18 @@ This process is a cornerstone interview question for software engineers, DevOps,
 It all starts with the URL: https://www.google.com. Your browser deconstructs this address:
 - https://: The protocol. It signifies a secure connection is required.
 - www.google.com: The domain name. This is a human-friendly address for a server's real location.
----
+
 
 ## 2. The DNS Request: The Internet's Phonebook
 Your computer doesn't know where "www.google.com" lives. It needs an IP address (like 142.251.32.196), a numerical label that uniquely identifies a server on the internet. To find this address, it initiates a DNS (Domain Name System) request.
 
 Think of DNS as the internet's phonebook. The browser checks its cache, then the operating system's cache. If the address isn't found, it queries a DNS Recursor (usually provided by your ISP). This recursor acts like a librarian, checking a hierarchy of DNS servers:
 
-1- Root Server: Points to the Top-Level Domain (TLD) server for .com.
-2- .com TLD Server: Points to the authoritative name servers for google.com.
-3- Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
+1 - Root Server: Points to the Top-Level Domain (TLD) server for .com.
+2 - .com TLD Server: Points to the authoritative name servers for google.com.
+3 - Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
 
 This IP address is cached on your machine for future requests to save time.
----
 
 ## 3. Establishing a Connection: TCP/IP and the Firewall
 With the IP address in hand, your browser can now communicate with Google's server. It does this using fundamental internet protocols: TCP/IP (Transmission Control Protocol/Internet Protocol).
