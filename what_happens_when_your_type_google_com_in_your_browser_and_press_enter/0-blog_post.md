@@ -32,7 +32,6 @@ The connection is established via a TCP three-way handshake:
 1. SYN: Your browser sends a "synchronize" packet to the server.
 2. SYN-ACK: The server responds with a "synchronize-acknowledge" packet.
 3. ACK: Your browser sends back an "acknowledge" packet. The connection is now open!
----
 
 ## 4. Securing the Connection: HTTPS/SSL
 Because you used https://, an additional secure layer is added. Before any application data is sent, your browser and the server initiate an SSL/TLS handshake.
@@ -43,24 +42,26 @@ Because you used https://, an additional secure layer is added. Before any appli
 4. Using the server's public key, a secure session key is generated and shared. All subsequent communication is encrypted with this session key.
 
 Now, a secure, encrypted tunnel exists between your browser and the server. Anyone intercepting the packets would see only gibberish.
----
+
 
 ## 5. Load-Balancer: The Traffic Cop
 The single domain www.google.com doesn't point to just one server; it points to a fleet of thousands. To distribute the immense traffic efficiently and ensure high availability, Google uses a Load-Balancer.
 
 When your request reaches Google's network, the load-balancer acts as a traffic cop. It uses an algorithm (like Round Robin or Least Connections) to forward your request to one of many available web servers. This prevents any single server from becoming overwhelmed, a concept known as horizontal scaling.
 
----
+
 ## 6. The Web Server: Serving Static Content
 Your request reaches a web server (like Nginx or Apache). The web server's primary job is to serve static content—the HTML, CSS, JavaScript, and image files that make up the structure and style of the Google homepage. It fetches these files from the file system and sends them back through the established secure tunnel.
 
 For a simple static site, the journey might end here. But for a dynamic site like Google Search, there's more to do.
----
+
+
 ## 7. The Application Server: The Brain for Dynamic Content
 If the request requires dynamic processing (e.g., generating personalized search results, checking your Gmail inbox), the web server passes the request to an application server.
 
 This server runs the core business logic of the application. It's where server-side code (written in Python, Java, Go, etc.) is executed. The application server figures out what needs to be done to fulfill your request.
----
+
+
 ## 8. The Database: The Persistent Memory
 To generate those dynamic results, the application server often needs to fetch or store information. It queries a database (like MySQL, PostgreSQL, or a NoSQL option like Bigtable).
 
