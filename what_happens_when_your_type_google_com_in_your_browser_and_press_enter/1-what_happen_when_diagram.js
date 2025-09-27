@@ -1,7 +1,7 @@
 # What Happens When You Type https://www.google.com in Your Browser and Press Enter?
 ## The Complete Journey - Request Flow Diagram :
 
-
+graph TD
     A[User Types https://www.google.com] --> B{DNS Resolution}
     B --> C[Browser Cache]
     C --> D[OS Cache]
