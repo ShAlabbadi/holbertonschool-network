@@ -1,6 +1,7 @@
 # What Happens When You Type https://www.google.com in Your Browser and Press Enter?
 ## The Complete Journey - Request Flow Diagram :
 
+```mermaid
 graph TD
     A[User Types https://www.google.com] --> B{DNS Resolution}
     B --> C[Browser Cache]
@@ -57,3 +58,4 @@ graph TD
     AO --> AP[SSL Decryption]
     AP --> AQ[Render Page]
     AQ --> AR[Display Google Homepage]
+```
