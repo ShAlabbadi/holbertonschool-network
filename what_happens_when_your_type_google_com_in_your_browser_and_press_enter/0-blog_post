@@ -1,4 +1,4 @@
-What Happens When You Type https://www.google.com and Press Enter?
+## What Happens When You Type https://www.google.com and Press Enter?
 You do it dozens of times a day: open a browser, type a web address, and information appears almost magically. But have you ever stopped to think about the incredible technological symphony that plays out in the milliseconds between hitting "Enter" and seeing the Google homepage?
 
 This process is a cornerstone interview question for software engineers, DevOps, and SREs because it tests your understanding of the entire web stack. Let's demystify the magic by breaking down the journey step-by-step.
