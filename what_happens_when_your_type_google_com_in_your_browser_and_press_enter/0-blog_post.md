@@ -67,7 +67,7 @@ To generate those dynamic results, the application server often needs to fetch o
 
 For a search query, the application server would ask the database to look up web pages relevant to your search terms, rank them, and return the top results. The application server then formats this data, the web server packages it into an HTML page, and the response begins its journey back to you.
 
-- The Return Journey : 
+The Return Journey : 
 The entire process reverses. The database returns data to the application server, which processes it. The application server hands the dynamic content to the web server, which integrates it with static assets. The load-balancer routes the response back through the firewall, through the encrypted TCP/IP connection, and finally, to your browser.
 
 Your browser receives the HTML, CSS, and JS files, renders the page, and displays the familiar Google homepage. All of this happens in a fraction of a second, a testament to the powerful and complex infrastructure of the modern web.
