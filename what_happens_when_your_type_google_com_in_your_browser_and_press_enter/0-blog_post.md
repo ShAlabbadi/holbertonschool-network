@@ -14,9 +14,9 @@ Your computer doesn't know where "www.google.com" lives. It needs an IP address 
 
 Think of DNS as the internet's phonebook. The browser checks its cache, then the operating system's cache. If the address isn't found, it queries a DNS Recursor (usually provided by your ISP). This recursor acts like a librarian, checking a hierarchy of DNS servers:
 
-1 - Root Server: Points to the Top-Level Domain (TLD) server for .com.
-2 - .com TLD Server: Points to the authoritative name servers for google.com.
-3 - Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
+1- Root Server: Points to the Top-Level Domain (TLD) server for .com.
+2- .com TLD Server: Points to the authoritative name servers for google.com.
+3- Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
 
 This IP address is cached on your machine for future requests to save time.
 
