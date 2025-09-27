@@ -14,9 +14,9 @@ Your computer doesn't know where "www.google.com" lives. It needs an IP address 
 
 Think of DNS as the internet's phonebook. The browser checks its cache, then the operating system's cache. If the address isn't found, it queries a DNS Recursor (usually provided by your ISP). This recursor acts like a librarian, checking a hierarchy of DNS servers:
 
-1- Root Server: Points to the Top-Level Domain (TLD) server for .com.
-2- .com TLD Server: Points to the authoritative name servers for google.com.
-3- Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
+1. Root Server: Points to the Top-Level Domain (TLD) server for .com.
+2. .com TLD Server: Points to the authoritative name servers for google.com.
+3. Authoritative Name Server: Finally, it returns the actual IP address for www.google.com.
 
 This IP address is cached on your machine for future requests to save time.
 
@@ -29,18 +29,18 @@ With the IP address in hand, your browser can now communicate with Google's serv
 Before the connection is fully established, it must often pass through a Firewall. A firewall is a security system that acts as a gatekeeper, controlling incoming and outgoing network traffic based on predetermined security rules. It ensures that the attempt to connect on port 443 (the standard port for HTTPS) is allowed.
 
 The connection is established via a TCP three-way handshake:
-1- SYN: Your browser sends a "synchronize" packet to the server.
-2- SYN-ACK: The server responds with a "synchronize-acknowledge" packet.
-3- ACK: Your browser sends back an "acknowledge" packet. The connection is now open!
+1. SYN: Your browser sends a "synchronize" packet to the server.
+2. SYN-ACK: The server responds with a "synchronize-acknowledge" packet.
+3. ACK: Your browser sends back an "acknowledge" packet. The connection is now open!
 ---
 
 ## 4. Securing the Connection: HTTPS/SSL
 Because you used https://, an additional secure layer is added. Before any application data is sent, your browser and the server initiate an SSL/TLS handshake.
 
-1- Your browser sends a "Client Hello" message with its supported encryption algorithms.
-2- The server responds with a "Server Hello," its SSL Certificate (which includes a public key), and the chosen encryption method.
-3- Your browser verifies the certificate's authenticity (e.g., that it's issued by a trusted Certificate Authority and for the correct domain).
-4- Using the server's public key, a secure session key is generated and shared. All subsequent communication is encrypted with this session key.
+1. Your browser sends a "Client Hello" message with its supported encryption algorithms.
+2. The server responds with a "Server Hello," its SSL Certificate (which includes a public key), and the chosen encryption method.
+3. Your browser verifies the certificate's authenticity (e.g., that it's issued by a trusted Certificate Authority and for the correct domain).
+4. Using the server's public key, a secure session key is generated and shared. All subsequent communication is encrypted with this session key.
 
 Now, a secure, encrypted tunnel exists between your browser and the server. Anyone intercepting the packets would see only gibberish.
 ---
